@@ -1,0 +1,185 @@
+#mainlogo { display: flex; 
+            background-color: black;
+            color: white;
+            flex-direction: row-reverse;
+          }
+
+#imglogo { width: 122px;
+           margin-left: 0px;
+           
+         }
+
+#textlogo {
+            padding-left: 5px;
+            background-color: black;
+            margin-right: auto;
+        }
+
+#textlogo h1 { margin-bottom: 0px; }
+#textlogo h5 { margin: 5px 5px 0px 5px; }
+
+nav {
+        background-color: black;
+        padding-top: 10px;
+}
+
+#pipe { 
+                display: flex;
+                background-color: black;
+                padding-left: 1em;
+              }
+        
+#pipe > div {
+                display: flex;
+                margin-right: 1em;
+                border-radius: 1em 1em 0px 0px;
+                }
+                
+                        
+#pipe > div.first {
+                padding: 0px 0px;
+                }
+
+#pipe > div a {
+        color: white;
+        display: flex;
+        height: 2.7em;
+        width: 7em;
+        line-height: 1;
+        padding: 8px 8px;
+        align-items: flex-end;
+        
+}
+
+.bar {
+        height: 10px;
+}
+
+
+body.home .bar, #pipe div.home {
+        background-color: #0074e5;
+}
+
+body.publications .bar, #pipe div.publications {
+        background-color: #f59005;
+}
+
+body.workingpapers .bar, #pipe div.workingpapers {
+        background-color: #7d0bb1;
+}
+
+body.teaching .bar, #pipe div.teaching {
+        background-color: #25900a;
+}
+
+#pipe div.more {
+        background-color: #bb2525;
+        position: relative;
+}
+
+.dropdown-content {
+        display: none;
+        position: absolute;
+        top: 2.7em;
+        left: 0;
+        background-color: #f1f1f1;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+}
+
+.dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+}
+
+#pipe div.more div.dropdown-content a.home {
+        background-color: #0074e5;
+}
+
+#pipe div.more div.dropdown-content a.publications {
+        background-color: #f59005;
+}
+
+#pipe div.more div.dropdown-content a.workingpapers {
+        background-color: #7d0bb1;
+}
+
+#pipe div.more div.dropdown-content a.teaching {
+        background-color: #25900a;
+}
+
+#pipe .show {display:block;}
+
+#redbar {
+        height: 10px;
+        background-color: #bb2525;
+        }
+
+
+#text { 
+        background-color: #ebebeb;
+        padding: 10px 0px;
+      }
+
+.topic { margin: 10px 0px; }
+.topic .title { margin: 0px 0px 5px 10px; }
+.topic .contents { margin-left: 30px; }
+
+ul.works, ul.teaching {
+        list-style-type: none;
+        margin-left: 40px;
+        padding: 0px;
+        border: 1px solid rgb(221,221,221)
+}
+
+ul.works > li:nth-of-type(odd) {
+        background-color: #f2f2f2;
+    }
+
+ul.works li {
+        padding: 20px 10px;
+        border-bottom: 1px solid rgb(221,221,221)
+}
+
+ul.teaching > li:nth-of-type(odd) {
+        background-color: #f2f2f2;
+    }
+
+ul.teaching li {
+        padding: 20px 10px;
+        border-bottom: 1px solid rgb(221,221,221)
+}
+
+
+
+#bottomlinks {
+        position: relative;
+        top: 0;
+        background-color: #ebebeb;
+}
+
+#links {
+        width: 800px;
+        margin: 0px auto;
+}
+
+@media (max-width: 540px) {
+        #pipe div.home, #pipe div.publications, #pipe div.workingpapers, #pipe div.teaching  {
+                display: none;
+        }
+        body.home #pipe div.home, body.publications #pipe div.publications, body.workingpapers #pipe div.workingpapers, body.teaching #pipe div.teaching {
+                display: flex;
+        }
+        
+        body.home #pipe div.more div.dropdown-content a.home, body.publications #pipe div.more div.dropdown-content a.publications, body.workingpapers #pipe div.more div.dropdown-content a.workingpapers, body.teaching #pipe div.more div.dropdown-content a.teaching {
+                display: none;
+        }
+      }
+
+@media (min-width: 540px) {
+        #pipe div.more {
+          display: none;
+        }
+      }
